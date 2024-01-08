@@ -1,6 +1,6 @@
 {
   "name": "@ahmedrangel/rand-user-agent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is an adapted version of rand-user-agent specifically designed for environments lacking access to server file systems, such as Cloudflare Workers.",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
