@@ -1,7 +1,7 @@
 {
   "name": "@ahmedrangel/rand-user-agent",
-  "version": "1.0.0-0",
-  "description": "This package is for getting latest agents from WebScrapingAPI data and randomize it",
+  "version": "1.0.0",
+  "description": "This is an adapted version of rand-user-agent specifically designed for environments lacking access to server file systems, such as Cloudflare Workers.",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
