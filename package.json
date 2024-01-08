@@ -1,20 +1,18 @@
 {
-  "name": "rand-user-agent",
-  "version": "2.0.45",
-  "description": "This package is for getting latest agents and randomize it",
+  "name": "@ahmedrangel/rand-user-agent",
+  "version": "1.0.0-0",
+  "description": "This package is for getting latest agents from WebScrapingAPI data and randomize it",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "",
+    "test": "node example/example.js",
     "build": "shx rm -rf ./dist/* && tsc"
   },
   "engines": {
     "node": ">=14.16"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WebScrapingAPI/rand-user-agent.git"
-  },
+  "repository": "ahmedrangel/rand-user-agent",
+  "homepage": "https://github.com/ahmedrangel/rand-user-agent",
   "type": "module",
   "keywords": [
     "user-agent",
@@ -26,25 +24,28 @@
     "random",
     "random-user-agent"
   ],
-  "author": "WebScrapingAPI",
+  "author": "ahmedrangel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WebScrapingAPI/rand-user-agent/issues"
+    "url": "https://github.com/ahmedrangel/rand-user-agent/issues"
   },
   "files": [
-    "dist",
-    "data"
+    "dist"
   ],
-  "homepage": "https://github.com/WebScrapingAPI/rand-user-agent#readme",
   "devDependencies": {
-    "@types/node": "^18.14.1",
-    "@types/pg": "^8.6.6",
-    "device-detector-js": "^2.2.10",
-    "dotenv": "^10.0.0",
-    "mysql2": "^3.1.2",
-    "pg": "^8.7.1",
-    "typescript": "^4.9.5",
-    "ua-parser-js": "^1.0.2",
-    "shx": "^0.3.4"
+    "@types/node": "^20.10.7",
+    "eslint": "^8.56.0",
+    "shx": "^0.3.4",
+    "typescript": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^6.18.0",
+    "@typescript-eslint/parser": "^6.18.0",
+    "changelogen": "^0.5.5"
+  },
+  "changelog": {
+    "repo": {
+      "repo": "ahmedrangel/rand-user-agent",
+      "provider": "github",
+      "domain": "github.com"
+    }
   }
 }
