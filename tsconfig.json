@@ -10,8 +10,8 @@
     "declaration": true,
     "emitDeclarationOnly": false,
     "declarationMap": true,
-    "moduleSuffixes": [".js", ".ts", ""]
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules", "**/*.test.ts"],
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/data/**/*.json"],
 }

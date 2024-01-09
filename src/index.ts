@@ -1,11 +1,10 @@
-import {
-  JSONfrequencyNormalize,
-  JSONIsFrequency,
-  JSONinterval,
-  randomElement,
-} from "./helpers.js";
+import { JSONfrequencyNormalize, JSONIsFrequency, JSONinterval, randomElement } from "./helpers.js";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
+const data = require("./data/user-agents.json") as Record<string, any>;
+
 export const randUA = (
-  data: Record<string, any>,
   device: string,
   browser: string | null = null,
   os: string | null = null,
