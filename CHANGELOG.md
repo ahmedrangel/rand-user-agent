@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.1
+
+[compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.1.0...v2.0.1)
+
+### 🩹 Fixes
+
+- User agents data is now exported from a .ts file ([da42604](https://github.com/ahmedrangel/rand-user-agent/commit/da42604))
+
+### ❤️ Contributors
+
+- Ahmed Rangel ([@ahmedrangel](http://github.com/ahmedrangel))
+
 ## v2.0.0
 
 [compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v1.0.1...v2.0.0)
