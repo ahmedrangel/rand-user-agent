@@ -3,7 +3,7 @@
 
 ## v2.0.1
 
-[compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.1.0...v2.0.1)
+[compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.0...v2.0.1)
 
 ### 🩹 Fixes
 
