@@ -10,8 +10,7 @@
     "declaration": true,
     "emitDeclarationOnly": false,
     "declarationMap": true,
-    "resolveJsonModule": true
   },
   "exclude": ["node_modules", "**/*.test.ts"],
-  "include": ["src/**/*", "src/data/**/*.json"],
+  "include": ["src/**/*"]
 }

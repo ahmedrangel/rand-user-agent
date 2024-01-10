@@ -1,16 +1,12 @@
 import { JSONfrequencyNormalize, JSONIsFrequency, JSONinterval, randomElement } from "./helpers.js";
-import { createRequire } from "module";
-
-const require = createRequire(import.meta.url);
-const data = require("./data/user-agents.json") as Record<string, any>;
-
+import data from "./data/user-agents.js";
 export const randUA = (
   device: string,
   browser: string | null = null,
   os: string | null = null,
 ): string => {
 
-  let content = data;
+  let content: Record<string, any> = data;
   content = JSONfrequencyNormalize(content);
   if (JSONIsFrequency(content)) {
     content = JSONinterval(content);
