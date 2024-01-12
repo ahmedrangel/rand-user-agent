@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.3
+
+[compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.2...v2.0.3)
+
+### 🏡 Chore
+
+- Update engine and dependencies ([90bfddf](https://github.com/ahmedrangel/rand-user-agent/commit/90bfddf))
+
+### ❤️ Contributors
+
+- Ahmed Rangel ([@ahmedrangel](http://github.com/ahmedrangel))
+
 ## v2.0.2
 
 [compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.1...v2.0.2)
