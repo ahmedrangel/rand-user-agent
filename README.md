@@ -1,6 +1,6 @@
 # Random User Agent
 
-This is an adapted version of [rand-user-agent](https://www.npmjs.com/package/rand-user-agent) specifically designed for environments lacking access to server file systems (fs), such as Cloudflare Workers.
+This is an adapted version of [rand-user-agent by WebScrapingAPI](https://www.npmjs.com/package/rand-user-agent) specifically designed for environments lacking access to server file systems (fs), such as Cloudflare Workers.
 
 ## Installation
 
