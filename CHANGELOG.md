@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v2.0.2
+
+[compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.1...v2.0.2)
+
+### 🏡 Chore
+
+- **release:** V2.0.1 ([af0fb18](https://github.com/ahmedrangel/rand-user-agent/commit/af0fb18))
+- Revert json file and implement import assertion ([f1c8c91](https://github.com/ahmedrangel/rand-user-agent/commit/f1c8c91))
+
+### ❤️ Contributors
+
+- Ahmed Rangel ([@ahmedrangel](http://github.com/ahmedrangel))
+
 ## v2.0.1
 
 [compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.0...v2.0.1)
