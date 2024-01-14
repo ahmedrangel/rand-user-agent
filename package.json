@@ -11,8 +11,11 @@
   "engines": {
     "node": ">=17.1.0"
   },
-  "repository": "ahmedrangel/rand-user-agent",
-  "homepage": "https://github.com/ahmedrangel/rand-user-agent",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmedrangel/rand-user-agent.git"
+  },
+  "homepage": "https://github.com/ahmedrangel/rand-user-agent#readme",
   "type": "module",
   "keywords": [
     "user-agent",
