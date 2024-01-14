@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v2.0.4
+
+[compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.3...v2.0.4)
+
+### 🏡 Chore
+
+- Correct package.json info ([a5337e0](https://github.com/ahmedrangel/rand-user-agent/commit/a5337e0))
+- Updated user-agents ([3ecfafd](https://github.com/ahmedrangel/rand-user-agent/commit/3ecfafd))
+
+### ❤️ Contributors
+
+- Ahmed Rangel ([@ahmedrangel](http://github.com/ahmedrangel))
+
 ## v2.0.3
 
 [compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.2...v2.0.3)
