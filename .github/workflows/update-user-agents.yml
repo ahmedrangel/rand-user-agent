@@ -9,17 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 18.x ]
+        node-version: [20]
 
     steps:
     - name: 🛎️ Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         ref: ci-test
 
     - name: 📝 Updating user-agents dataset
       run: |
-        curl -sS https://cdn.ahmedrangel.com/user-agents.json -o src/data/user-agents.json
+        curl -sS https://raw.githubusercontent.com/WebScrapingAPI/rand-user-agent/master/data/user-agents.json -o src/data/user-agents.json
 
     - name: 💾 Commit & push
       run: |
