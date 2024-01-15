@@ -2,7 +2,7 @@ name: Update user-agents dataset
 
 on:
   schedule:
-    - cron: '*/1 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   update-agents:
