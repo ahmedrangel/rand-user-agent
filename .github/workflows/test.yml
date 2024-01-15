@@ -43,4 +43,4 @@ jobs:
         
     - name: Generate Changelogen
       run: |
-        pnpm changelogen gh release --token ${{ secrets.GITHUB_TOKEN }}
+        pnpm changelogen gh release --release --token ${{ secrets.GITHUB_TOKEN }}
