@@ -41,6 +41,7 @@ jobs:
       run: |
         pnpm install
         
-    - name: Generate Changelogen
+    - name: Generate Changelogen & Github Release
       run: |
-        pnpm changelogen gh release --release --token ${{ secrets.GITHUB_TOKEN }}
+        pnpm changelogen --release --push
+        pnpm changelogen gh release --token ${{ secrets.GITHUB_TOKEN }}
