@@ -24,4 +24,4 @@ jobs:
         git config user.email "ahmedrangel@outlook.com"
         git add src/data/archivo.json
         git commit -m "test: update user agent CI test"
-        git push origin ci-test
+        git push
