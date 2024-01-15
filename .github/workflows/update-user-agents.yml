@@ -1,0 +1,27 @@
+name: Update user-agents dataset
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+
+jobs:
+  update-agents:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🛎️ Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: ci-test
+
+    - name: 📝 Updating user-agents dataset
+      run: |
+        curl -sS https://cdn.ahmedrangel.com/user-agents.json -o src/data/user-agents.json
+
+    - name: 💾 Commit & push
+      run: |
+        git config user.name "ahmedrangel"
+        git config user.email "ahmedrangel@outlook.com"
+        git add src/data/archivo.json
+        git commit -m "test: update user agent CI test"
+        git push origin ci-test
