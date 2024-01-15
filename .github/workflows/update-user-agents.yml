@@ -14,6 +14,17 @@ jobs:
     steps:
     - name: 🛎️ Checkout
       uses: actions/checkout@v4
+      with:
+        ref: ci-test
+
+    - run: corepack enable
+    
+    - name: 🐢 Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        registry-url: https://registry.npmjs.org/
+        cache: 'pnpm'
 
     - name: 📝 Updating user-agents dataset
       run: |
@@ -21,8 +32,23 @@ jobs:
 
     - name: 💾 Commit & push
       run: |
-        git config user.name "ahmedrangel"
+        git config user.name "Ahmed Rangel"
         git config user.email "ahmedrangel@outlook.com"
         git add src/data/user-agents.json
         git commit -m "chore: updated user-agents dataset"
         git push
+
+    - name: ⚙️ Install PNPM
+      run: |
+        pnpm install
+        
+    - name: 📜 Generate Changelogen & Github Release
+      run: |
+        pnpm changelogen --release --push
+        pnpm changelogen gh release --token ${{ secrets.GITHUB_TOKEN }}
+      
+    - name: 🚀 Publish to NPM
+      run: |
+        pnpm publish --access public
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
