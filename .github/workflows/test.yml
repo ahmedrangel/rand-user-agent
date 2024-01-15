@@ -31,7 +31,7 @@ jobs:
 
     - name: 💾 Commit & push
       run: |
-        git config user.name "ahmedrangel"
+        git config user.name "Ahmed Rangel"
         git config user.email "ahmedrangel@outlook.com"
         git add src/data/user-agents.json
         git commit -m "chore: updated user-agents dataset"
