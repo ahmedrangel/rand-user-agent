@@ -1,7 +1,7 @@
 {
   "name": "@ahmedrangel/rand-user-agent",
   "version": "2.0.4",
-  "description": "This is an adapted version of rand-user-agent specifically designed for environments lacking access to server file systems (fs), such as Cloudflare Workers.",
+  "description": "This is an adapted version of rand-user-agent by WebScrapingAPI specifically designed for environments lacking access to server file systems (fs), such as Cloudflare Workers.",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -25,7 +25,9 @@
     "agents",
     "user-agents",
     "random",
-    "random-user-agent"
+    "random-user-agent",
+    "randomizer",
+    "cloudflare-workers"
   ],
   "author": "ahmedrangel",
   "license": "ISC",
