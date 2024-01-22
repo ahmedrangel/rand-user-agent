@@ -36,9 +36,10 @@ jobs:
         git commit -m "chore: updated user-agents dataset"
         git push
 
-    - name: ⚙️ Install PNPM
+    - name: 🔧 Install dependencies and build 
       run: |
         pnpm install
+        pnpm build
         
     - name: 📜 Generate Changelogen & Github Release
       run: |
