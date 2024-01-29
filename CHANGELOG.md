@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v2.0.7
+
+
+### 🩹 Fixes
+
+- Ci step ([fede0da](https://github.com/ahmedrangel/rand-user-agent/commit/fede0da))
+
+### 🏡 Chore
+
+- Updated user-agents dataset ([11eecc3](https://github.com/ahmedrangel/rand-user-agent/commit/11eecc3))
+
+### ❤️ Contributors
+
+- Ahmed Rangel ([@ahmedrangel](http://github.com/ahmedrangel))
+
 ## v2.0.6
 
 [compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.4...v2.0.6)
