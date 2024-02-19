@@ -54,10 +54,21 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
-    - name: 📦 Publish to GitHub Packages
+    - name: 🐢 Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        registry-url: 'https://npm.pkg.github.com'
+        scope: '@ahmedrangel'
+        cache: 'pnpm'
+
+    - name: 🔧 Install dependencies and build 
       run: |
-        echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
-        echo "@ahmedrangel:registry=https://npm.pkg.github.com" >> ~/.npmrc
-        pnpm publish --access public --registry=https://npm.pkg.github.com/ahmedrangel
+        pnpm install
+        pnpm build
+
+    - name: "📦 Publish to GitHub Packages"
+      run: |
+        pnpm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
