@@ -1,0 +1,61 @@
+name: Update user-agents dataset
+
+on: workflow_dispatch
+
+jobs:
+  update-agents:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    permissions:
+      contents: write
+      packages: write
+    steps:
+    - name: 🛎️ Checkout
+      uses: actions/checkout@v4
+
+    - run: corepack enable
+    
+    - name: 🐢 Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        registry-url: 'https://registry.npmjs.org/'
+        cache: 'pnpm'
+
+    - name: 📝 Updating user-agents dataset
+      run: |
+        curl -sS https://raw.githubusercontent.com/WebScrapingAPI/rand-user-agent/master/data/user-agents.json -o src/data/user-agents.json
+
+    - name: 💾 Commit & push
+      run: |
+        git config user.name "Ahmed Rangel"
+        git config user.email "ahmedrangel@outlook.com"
+        git add src/data/user-agents.json
+        git commit -m "chore: updated user-agents dataset"
+        git push
+
+    - name: 🔧 Install dependencies and build 
+      run: |
+        pnpm install
+        pnpm build
+        
+    - name: 📜 Generate Changelogen & Github Release
+      run: |
+        pnpm changelogen --release --push
+        pnpm changelogen gh release --token ${{ secrets.GITHUB_TOKEN }}
+      
+    - name: 🚀 Publish to NPM
+      run: |
+        pnpm publish --access public
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+    - name: 📦 Publish to GitHub Packages
+      run: |
+        echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+        echo "@ahmedrangel:registry=https://npm.pkg.github.com" >> ~/.npmrc
+        pnpm publish --access public --registry=https://npm.pkg.github.com/ahmedrangel
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
