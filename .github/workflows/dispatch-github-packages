@@ -1,0 +1,39 @@
+name: dispatch-github-packages
+
+on: workflow_dispatch
+
+jobs:
+  update-agents:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    permissions:
+      contents: write
+      packages: write
+    steps:
+    - name: 🛎️ Checkout
+      uses: actions/checkout@v4
+
+    - run: corepack enable
+    
+    - name: 🐢 Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        registry-url: 'https://registry.npmjs.org/'
+        cache: 'pnpm'
+
+    - name: 🔧 Install dependencies and build 
+      run: |
+        pnpm install
+        pnpm build
+
+    - name: 📦 Publish to GitHub Packages
+      with:
+        registry-url: 'https://npm.pkg.github.com'
+        scope: '@ahmedrangel'
+      run: |
+        pnpm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
