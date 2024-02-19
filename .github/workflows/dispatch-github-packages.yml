@@ -29,10 +29,15 @@ jobs:
         pnpm install
         pnpm build
 
-    - name: 📦 Publish to GitHub Packages
+    - name: 🐢 Setup Node
+      uses: actions/setup-node@v4
       with:
+        node-version: ${{ matrix.node-version }}
         registry-url: 'https://npm.pkg.github.com'
         scope: '@ahmedrangel'
+        cache: 'pnpm'
+
+    - name: "📦 Publish to GitHub Packages"
       run: |
         pnpm publish
       env:
