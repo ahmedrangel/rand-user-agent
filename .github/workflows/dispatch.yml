@@ -1,4 +1,4 @@
-name: Update user-agents dataset
+name: Update user-agents dataset (dispatch)
 
 on: workflow_dispatch
 
