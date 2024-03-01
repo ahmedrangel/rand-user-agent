@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v2.0.11
+
+
+### 🏡 Chore
+
+- Updated user-agents dataset ([160d035](https://github.com/ahmedrangel/rand-user-agent/commit/160d035))
+
+### 🤖 CI
+
+- Update cron schedule ([e0974ef](https://github.com/ahmedrangel/rand-user-agent/commit/e0974ef))
+
+### ❤️ Contributors
+
+- Ahmed Rangel ([@ahmedrangel](http://github.com/ahmedrangel))
+
 ## v2.0.10
 
 
