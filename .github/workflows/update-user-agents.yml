@@ -10,9 +10,6 @@ jobs:
     strategy:
       matrix:
         node-version: [20]
-    permissions:
-      contents: write
-      packages: write
     steps:
     - name: 🛎️ Checkout
       uses: actions/checkout@v4
