@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v2.0.13
+
+[compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.12...v2.0.13)
+
+### 🏡 Chore
+
+- Add npmrc ([d0faad8](https://github.com/ahmedrangel/rand-user-agent/commit/d0faad8))
+
+### 🤖 CI
+
+- Update ([5b4965e](https://github.com/ahmedrangel/rand-user-agent/commit/5b4965e))
+- Update ([90cd53d](https://github.com/ahmedrangel/rand-user-agent/commit/90cd53d))
+
+### ❤️ Contributors
+
+- Ahmed Rangel ([@ahmedrangel](http://github.com/ahmedrangel))
+
 ## v2.0.12
 
 
