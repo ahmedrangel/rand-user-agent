@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.12
+
+
+### 🏡 Chore
+
+- Update deps ([6b002db](https://github.com/ahmedrangel/rand-user-agent/commit/6b002db))
+- Updated user-agents dataset ([760c4b9](https://github.com/ahmedrangel/rand-user-agent/commit/760c4b9))
+
+### ❤️ Contributors
+
+- Ahmed Rangel ([@ahmedrangel](http://github.com/ahmedrangel))
+
 ## v2.0.11
 
 
