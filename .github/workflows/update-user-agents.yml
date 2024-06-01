@@ -7,17 +7,16 @@ on:
 jobs:
   update-agents:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20]
     steps:
     - name: 🛎️ Checkout
       uses: actions/checkout@v4
+
+    - run: corepack enable
     
     - name: 🐢 Setup Node
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '20'
         registry-url: 'https://registry.npmjs.org/'
         cache: 'pnpm'
 
