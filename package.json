@@ -38,12 +38,12 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/node": "^20.11.30",
-    "eslint": "^8.57.0",
+    "@types/node": "^20.13.0",
+    "eslint": "^9.4.0",
     "shx": "^0.3.4",
-    "typescript": "^5.4.3",
-    "@typescript-eslint/eslint-plugin": "^7.3.1",
-    "@typescript-eslint/parser": "^7.3.1",
+    "typescript": "^5.4.5",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
     "changelogen": "^0.5.5"
   },
   "changelog": {
@@ -52,5 +52,6 @@
       "provider": "github",
       "domain": "github.com"
     }
-  }
+  },
+  "packageManager": "pnpm@9.1.4"
 }
