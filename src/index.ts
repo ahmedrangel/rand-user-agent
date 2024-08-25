@@ -3,7 +3,7 @@ import data from "./data/user-agents.json" assert { type: "json" };
 export const randUA = (
   device: string,
   browser: string | null = null,
-  os: string | null = null,
+  os: string | null = null
 ): string => {
 
   let content: Record<string, any> = data;

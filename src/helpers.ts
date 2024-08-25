@@ -1,13 +1,13 @@
 interface IntervalArray {
-    [key: string]: { minIndex: number; maxIndex: number };
+  [key: string]: { minIndex: number, maxIndex: number };
 }
 
 interface FrequencyJson {
-    [key: string]: { [key: string]: number };
+  [key: string]: { [key: string]: number };
 }
 
 interface IntervalJson {
-    [key: string]: { [key: string]: { minIndex: number; maxIndex: number } };
+  [key: string]: { [key: string]: { minIndex: number, maxIndex: number } };
 }
 
 export const randomElement = function (array: IntervalArray): string {
@@ -24,7 +24,7 @@ export const randomElement = function (array: IntervalArray): string {
   return "No Agent Found";
 };
 
-export const JSONIsFrequency = function(json: FrequencyJson): boolean {
+export const JSONIsFrequency = function (json: FrequencyJson): boolean {
   /*
     Checks the format of a given json.
     If the first value of the first property is not a number
@@ -55,12 +55,12 @@ export const JSONfrequency = function (
 };
 
 export const arrayUniqueElements = function<T>(array: T[]): T[] {
-  return array.filter(function(el, index, arr) {
+  return array.filter(function (el, index, arr) {
     return index == arr.indexOf(el);
   });
 };
 
-export const JSONfrequencyNormalize = function(
+export const JSONfrequencyNormalize = function (
   content: FrequencyJson
 ): FrequencyJson {
   /*
@@ -85,7 +85,7 @@ export const JSONfrequencyNormalize = function(
   return contentParsed;
 };
 
-export const JSONinterval = function(content: FrequencyJson): IntervalJson {
+export const JSONinterval = function (content: FrequencyJson): IntervalJson {
   /*
     Transforms a frequency json to an interval json. So, for example, if you have
     a json in the format { deviceType: { userAgent: 5 }}
@@ -98,7 +98,7 @@ export const JSONinterval = function(content: FrequencyJson): IntervalJson {
     for (let [userAgent, frequency] of Object.entries(content[key])) {
       contentParsed[key][userAgent] = {
         minIndex: minIndex,
-        maxIndex: minIndex + frequency - 1,
+        maxIndex: minIndex + frequency - 1
       };
       minIndex = minIndex + frequency;
     }

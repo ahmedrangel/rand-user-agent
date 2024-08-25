@@ -6,7 +6,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "node example/example.js",
-    "build": "shx rm -rf ./dist/* && tsup-node src/index.ts --format esm --dts --config tsconfig.json"
+    "build": "shx rm -rf ./dist/* && tsup-node src/index.ts --format esm --dts --config tsconfig.json",
+    "lint": "eslint --fix --config .config/eslint.mjs"
   },
   "engines": {
     "node": ">=17.1.0"
