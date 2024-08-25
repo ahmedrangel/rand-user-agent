@@ -38,14 +38,14 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/node": "^20.13.0",
-    "@typescript-eslint/eslint-plugin": "^7.11.0",
-    "@typescript-eslint/parser": "^7.11.0",
+    "@stylistic/eslint-plugin": "^2.6.4",
+    "@types/node": "^22.5.0",
+    "@typescript-eslint/parser": "^8.2.0",
     "changelogen": "^0.5.5",
-    "eslint": "^9.4.0",
+    "eslint": "^9.9.1",
     "shx": "^0.3.4",
     "tsup": "^8.2.4",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.4"
   },
   "changelog": {
     "repo": {
@@ -54,5 +54,5 @@
       "domain": "github.com"
     }
   },
-  "packageManager": "pnpm@9.1.4"
+  "packageManager": "pnpm@9.8.0"
 }
