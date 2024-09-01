@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.19
+
+
+### 🏡 Chore
+
+- Lint ([56118d1](https://github.com/ahmedrangel/rand-user-agent/commit/56118d1))
+- Updated user-agents dataset ([4bc695e](https://github.com/ahmedrangel/rand-user-agent/commit/4bc695e))
+
+### ❤️ Contributors
+
+- Ahmed Rangel ([@ahmedrangel](http://github.com/ahmedrangel))
+
 ## v2.0.18
 
 
