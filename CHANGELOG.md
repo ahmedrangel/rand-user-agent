@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.20
+
+
+### 🏡 Chore
+
+- **release:** V2.0.19 ([b6a87e7](https://github.com/ahmedrangel/rand-user-agent/commit/b6a87e7))
+- Updated user-agents dataset ([774b109](https://github.com/ahmedrangel/rand-user-agent/commit/774b109))
+
+### ❤️ Contributors
+
+- Ahmed Rangel ([@ahmedrangel](http://github.com/ahmedrangel))
+
 ## v2.0.19
 
 
