@@ -23,6 +23,10 @@ jobs:
     - name: 📝 Updating user-agents dataset
       run: |
         curl -sS https://raw.githubusercontent.com/WebScrapingAPI/rand-user-agent/master/data/user-agents.json -o src/data/user-agents.json
+        if [[ ! -s src/data/user-agents.json || "$(jq -r 'length' src/data/user-agents.json)" -eq 0 ]]; then
+          echo "Error: Failed to update dataset"
+          exit 1
+        fi
 
     - name: 💾 Commit & push
       run: |
