@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v2.0.22
+
+[compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.21...v2.0.22)
+
+### 🏡 Chore
+
+- Updated user-agents dataset" ([2c48f59](https://github.com/ahmedrangel/rand-user-agent/commit/2c48f59))
+
+### 🤖 CI
+
+- Fix ([401c66b](https://github.com/ahmedrangel/rand-user-agent/commit/401c66b))
+
+### ❤️ Contributors
+
+- Ahmed Rangel <ahmedrangel@outlook.com>
+
 ## v2.0.21
 
 
