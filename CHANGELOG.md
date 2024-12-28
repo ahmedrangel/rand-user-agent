@@ -1,6 +1,32 @@
 # Changelog
 
 
+## v2.0.23
+
+[compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.22...v2.0.23)
+
+### 🩹 Fixes
+
+- Support empty method and improve code ([8997a72](https://github.com/ahmedrangel/rand-user-agent/commit/8997a72))
+
+### 💅 Refactors
+
+- Use unbuild ([1db7886](https://github.com/ahmedrangel/rand-user-agent/commit/1db7886))
+
+### 🏡 Chore
+
+- **release:** V2.0.22 ([fa2d57c](https://github.com/ahmedrangel/rand-user-agent/commit/fa2d57c))
+- Update deps ([0aa62c1](https://github.com/ahmedrangel/rand-user-agent/commit/0aa62c1))
+- **package:** Update node version ([d035444](https://github.com/ahmedrangel/rand-user-agent/commit/d035444))
+
+### 🤖 CI
+
+- Use node v22 ([c9119ed](https://github.com/ahmedrangel/rand-user-agent/commit/c9119ed))
+
+### ❤️ Contributors
+
+- Ahmed Rangel ([@ahmedrangel](http://github.com/ahmedrangel))
+
 ## v2.0.22
 
 [compare changes](https://github.com/ahmedrangel/rand-user-agent/compare/v2.0.21...v2.0.22)
