@@ -10,7 +10,7 @@
     "lint": "eslint --fix --config .config/eslint.mjs"
   },
   "engines": {
-    "node": ">=17.1.0"
+    "node": ">=22.11.0"
   },
   "repository": {
     "type": "git",
