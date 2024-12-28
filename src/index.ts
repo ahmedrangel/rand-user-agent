@@ -1,18 +1,16 @@
 import { JSONfrequencyNormalize, JSONIsFrequency, JSONinterval, randomElement } from "./helpers.js";
 import data from "./data/user-agents.json" with { type: "json" };
 export const randUA = (
-  device: string,
+  device: string = "",
   browser: string | null = null,
   os: string | null = null
 ): string => {
 
-  let content: Record<string, any> = data;
-  content = JSONfrequencyNormalize(content);
-  if (JSONIsFrequency(content)) {
-    content = JSONinterval(content);
-  }
+  const content = JSONfrequencyNormalize(data);
+  if (!JSONIsFrequency(content)) throw new Error("Invalid JSON format");
+  const jsonInterval = JSONinterval(content);
   let options: string[] = [];
-  const keys = Object.keys(content);
+  const keys = Object.keys(jsonInterval);
   for (const index in keys) {
     let filter = true;
     if (keys[index].indexOf(device) === -1) {
@@ -29,9 +27,7 @@ export const randUA = (
     }
   }
   if (options.length === 0) {
-    return randomElement(content);
+    return randomElement(jsonInterval[keys[Math.floor(Math.random() * keys.length)]]);
   }
-  return randomElement(
-    content[options[Math.floor(Math.random() * options.length)]]
-  );
+  return randomElement(jsonInterval[options[Math.floor(Math.random() * options.length)]]);
 };

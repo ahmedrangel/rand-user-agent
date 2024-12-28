@@ -7,7 +7,7 @@ interface FrequencyJson {
 }
 
 interface IntervalJson {
-  [key: string]: { [key: string]: { minIndex: number, maxIndex: number } };
+  [key: string]: IntervalArray;
 }
 
 export const randomElement = function (array: IntervalArray): string {
@@ -31,6 +31,7 @@ export const JSONIsFrequency = function (json: FrequencyJson): boolean {
     then it will return true as the json has the format
     { deviceType: { userAgent: frequency }}
     */
+  if (Object.keys(json).length === 0) return false;
   const [, frequency] = Object.entries(json[Object.keys(json)[0]])[0];
   return !isNaN(frequency);
 };
@@ -52,12 +53,6 @@ export const JSONfrequency = function (
     }
   }
   return contentParsed;
-};
-
-export const arrayUniqueElements = function<T>(array: T[]): T[] {
-  return array.filter(function (el, index, arr) {
-    return index == arr.indexOf(el);
-  });
 };
 
 export const JSONfrequencyNormalize = function (
